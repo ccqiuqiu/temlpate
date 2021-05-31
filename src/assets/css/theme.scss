@@ -1,7 +1,42 @@
 /**
  * Created by 熊超超 on 2017/8/4.
  */
-
+@import "./vars";
 .main-app {
   /*覆盖主题样式*/
+
+  .vxe-table {
+    .vxe-table--fixed-right-wrapper.scrolling--middle{
+      box-shadow: -4px 0 4px 0 rgba(0,0,0, 0.06) !important;
+    }
+    .vxe-table--header{
+      color: #909399;
+    }
+    &.size--small{
+      font-size: 12px !important;
+    }
+    .vxe-table--empty-placeholder{
+      border-bottom: 1px solid #EBEEF5;
+      color: #909399;
+      top: 38px !important;
+    }
+    .vxe-table--empty-block{
+      width: 100% !important;
+    }
+    .is--indeterminate.vxe-cell--checkbox .vxe-checkbox--icon:before,
+    .vxe-checkbox--checked-icon:before{
+      color: $--color-primary !important;
+      border-color: $--color-primary !important;
+      background-color: $--color-primary !important;
+    }
+    .vxe-cell--checkbox:not(.is--disabled):hover .vxe-checkbox--icon:before{
+      border-color: $--color-primary !important;
+    }
+    .vxe-checkbox--icon:before{
+      border-width: 1px;
+    }
+  }
+  .vxe-table--tooltip-wrapper{
+    z-index: 3000!important;
+  }
 }
