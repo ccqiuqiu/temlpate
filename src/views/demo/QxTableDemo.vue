@@ -15,7 +15,8 @@
       max-height="300"
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
       :columns="mColumns"
-      :data="data1"
+      :page="{layout: 'total, prev, pager, next, jumper'}"
+      action="system/testPage"
     />
     <el-input-number v-model="aaa" :precision="1"/>
   </div>
@@ -89,7 +90,8 @@ export default {
       ],
       data1: [{name: 'name', age: 12, sex: '1'}],
       mColumns: [
-        { type: 'seq', title: '序号', width: 80 },
+        // { type: 'seq', title: '序号', width: 80 },
+        {type: 'index', label: '序号'},
         { field: 'name', title: 'ElInput', minWidth: 140, editRender: { name: 'ElInput' } },
         { field: 'age', title: 'ElInputNumber', width: 160, editRender: { name: 'ElInputNumber', props: { max: 35, min: 18 } } },
         {

@@ -38,7 +38,10 @@ const actions = {
         })
       }, 300)
     })
-  }
+  },
+  testPage(context, params) {
+    return {data: {list: Array.from({length: 10}, (v, k) => ({id: k, name: 'name' + Math.random()})), total: 300}}
+  },
 }
 
 export default { namespaced: true, state, mutations, actions }
