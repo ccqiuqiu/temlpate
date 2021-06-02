@@ -14,8 +14,6 @@
       size="small"
       max-height="300"
       :tApi.sync="tApi"
-      :checkboxConfig="{reserve: true}"
-      :rowId="id"
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
       :columns="mColumns"
       :page="{layout: 'total, prev, pager, next, jumper'}"
@@ -97,7 +95,7 @@ export default {
         // { type: 'seq', title: '序号', width: 80 },
         {type: 'selection', label: '序号'},
         { field: 'name', title: 'ElInput', minWidth: 140, editRender: { name: 'ElInput' } },
-        { field: 'age', title: 'ElInputNumber', width: 160, editRender: { name: 'ElInputNumber', props: { max: 35, min: 18 } } },
+        { field: 'age', title: 'ElInputNumber', width: 160, editRender: { name: 'ElInputNumber', props: { max: 35, min: 0, precision: 4 } } },
         {
           field: 'sex',
           title: 'ElSelect',
