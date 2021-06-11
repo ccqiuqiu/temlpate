@@ -23,7 +23,6 @@
     .vxe-table--empty-block{
       width: 100% !important;
     }
-    .is--indeterminate.vxe-cell--checkbox .vxe-checkbox--icon:before,
     .vxe-checkbox--checked-icon:before{
       color: $--color-primary !important;
       border-color: $--color-primary !important;
@@ -37,6 +36,37 @@
     }
     .vxe-table--header-wrapper{
       background-color: #fafafa !important;
+    }
+    .is--checked.vxe-custom--option .vxe-checkbox--icon:before,
+    .is--checked.vxe-export--panel-column-option .vxe-checkbox--icon:before,
+    .is--checked.vxe-table--filter-option .vxe-checkbox--icon:before,
+    .is--indeterminate.vxe-custom--option .vxe-checkbox--icon:before,
+    .is--indeterminate.vxe-export--panel-column-option .vxe-checkbox--icon:before,
+    .is--indeterminate.vxe-table--filter-option .vxe-checkbox--icon:before,
+    .vxe-table--render-default .is--checked.vxe-cell--checkbox .vxe-checkbox--icon:before,
+    .vxe-table--render-default .is--indeterminate.vxe-cell--checkbox .vxe-checkbox--icon:before {
+      color: $--color-primary !important;
+      border-color: $--color-primary !important;
+      background-color: $--color-primary !important;
+    }
+    .vxe-custom--option:not(.is--disabled):hover .vxe-checkbox--icon:before,
+    .vxe-export--panel-column-option:not(.is--disabled):hover .vxe-checkbox--icon:before,
+    .vxe-table--filter-option:not(.is--disabled):hover .vxe-checkbox--icon:before,
+    .vxe-table--render-default .vxe-cell--checkbox:not(.is--disabled):hover .vxe-checkbox--icon:before{
+      border-color: $--color-primary !important;
+    }
+    .filter--active .vxe-cell--filter .vxe-filter--btn{
+      color: $--color-primary !important;
+    }
+    .vxe-table--filter-wrapper {
+      .vxe-table--filter-footer button:hover{
+        color: $--color-primary !important;
+      }
+      li{
+        &.is--checked{
+          color: $--color-primary !important;
+        }
+      }
     }
   }
   .vxe-table--tooltip-wrapper{
