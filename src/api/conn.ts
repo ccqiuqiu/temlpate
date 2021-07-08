@@ -1,4 +1,6 @@
 // Created by 熊超超 on 2021/7/8.
+import type { RequestOptions } from '/#/axios';
+import type { Method } from 'axios';
 import { defHttp } from '/@/utils/http/axios';
 
 export default function request<T>(

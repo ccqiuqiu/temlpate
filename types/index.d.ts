@@ -26,6 +26,13 @@ declare type ComponentRef<T extends HTMLElement = HTMLDivElement> = ComponentElR
 
 declare type ElRef<T extends HTMLElement = HTMLDivElement> = Nullable<T>;
 
+declare interface ResponseData<T> {
+  data?: T;
+  error?: {
+    code: string;
+    message: string;
+  };
+}
 declare interface PageResponse<T = any> {
   list: T[];
   total: number;

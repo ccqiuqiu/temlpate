@@ -81,6 +81,8 @@
             ],
           },
         });
+        const data = await testStore.testDel('');
+        console.log(data);
       });
       function getFormValues() {
         console.log(getForm().getFieldsValue());

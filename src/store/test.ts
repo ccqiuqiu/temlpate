@@ -2,7 +2,7 @@
 
 import { defineStore } from 'pinia';
 import { store } from '/@/store';
-import api, { TestModel } from '/@@/api/test';
+import api, { TestModel } from '/@@/api/test/test';
 
 export const useTestStore = defineStore({
   id: 'test',

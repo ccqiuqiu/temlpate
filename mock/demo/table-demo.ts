@@ -1,6 +1,6 @@
 import { MockMethod } from 'vite-plugin-mock';
 import { Random } from 'mockjs';
-import { resultPageSuccess } from '../_util';
+import { resultError, resultPageSuccess, resultSuccess } from '../_util';
 
 function getRandomPics(count = 10): string[] {
   const arr: string[] = [];
@@ -43,10 +43,27 @@ export default [
   {
     url: '/basic-api/table/getDemoList',
     timeout: 100,
-    method: 'get',
+    method: 'post',
     response: ({ query }) => {
       const { page = 1, pageSize = 20 } = query;
+      // return resultError('1234');
       return resultPageSuccess(page, pageSize, demoList);
+    },
+  },
+  {
+    url: '/basic-api/table/save',
+    timeout: 100,
+    method: 'post',
+    response: () => {
+      return resultSuccess({});
+    },
+  },
+  {
+    url: '/basic-api/table/del',
+    timeout: 100,
+    method: 'post',
+    response: () => {
+      return resultError('错误', { code: 123 });
     },
   },
 ] as MockMethod[];

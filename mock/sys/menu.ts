@@ -1716,6 +1716,26 @@ const menus = {
   ],
 };
 
+const test = {
+  path: '/test',
+  name: 'Test',
+  component: 'LAYOUT',
+  meta: {
+    icon: 'ion:tv-outline',
+    title: 'test',
+  },
+  children: [
+    {
+      path: 'table',
+      name: '表格',
+      meta: {
+        title: '测试表格',
+      },
+      component: '/test/TestPage',
+    },
+  ],
+};
+
 export default [
   {
     url: '/basic-api/getMenuList',
@@ -1732,7 +1752,7 @@ export default [
       }
       const id = checkUser.userId;
       if (!id || id === '1') {
-        return resultSuccess([menus]);
+        return resultSuccess([menus, test]);
       }
       if (id === '2') {
         return resultSuccess([dashboardRoute, authRoute, levelRoute, linkRoute]);
