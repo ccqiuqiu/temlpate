@@ -55,7 +55,7 @@
       ];
       const [registerTable, { getForm, getSelectRows }] = useTable({
         title: '列表',
-        api: testStore.testPage,
+        api: testStore.testPageAction,
         columns,
         showIndexColumn: false,
         useSearchForm: true,
@@ -81,7 +81,7 @@
             ],
           },
         });
-        const data = await testStore.testDel('');
+        const data = await testStore.testDelAction('');
         console.log(data);
       });
       function getFormValues() {
