@@ -14,10 +14,10 @@ export const useTestStore = defineStore({
       return api.testDel(params);
     },
     testPageAction(params: BasicPageParams) {
-      this.name = '1243';
       return api.testPage(params);
     },
     testSaveAction(params: TestModel) {
+      this.name = '1234';
       return api.testSave(params);
     },
   },
