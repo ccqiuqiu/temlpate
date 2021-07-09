@@ -6,11 +6,15 @@ import api, { TestModel } from '/@@/api/test/test';
 
 export const useTestStore = defineStore({
   id: 'test',
+  state: (): TestModel => ({
+    name: '',
+  }),
   actions: {
     testDel(params: string) {
       return api.testDel(params);
     },
     testPage(params: BasicPageParams) {
+      this.name = '1243';
       return api.testPage(params);
     },
     testSave(params: TestModel) {

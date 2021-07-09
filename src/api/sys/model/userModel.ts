@@ -36,3 +36,24 @@ export interface GetUserInfoModel {
   // 介绍
   desc?: string;
 }
+
+export interface ListItem {
+  id: string;
+  avatar: string;
+  title: string;
+  datetime: string;
+  type: string;
+  read?: boolean;
+  description: string;
+  clickClose?: boolean;
+  extra?: string;
+  color?: string;
+  url?: string;
+}
+
+export interface TabItem {
+  key: string;
+  name: string;
+  list: ListItem[];
+  unreadlist?: ListItem[];
+}
