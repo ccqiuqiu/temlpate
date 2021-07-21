@@ -12,13 +12,13 @@ export default {
    * @param pattern
    */
   formatNumber: (num, pattern) => {
-    const strarr = num ? num.toString().split('.') : ['0']
-    const fmtarr = pattern ? pattern.split('.') : ['']
+    const strArr = num ? num.toString().split('.') : ['0']
+    const fmtArr = pattern ? pattern.split('.') : ['']
     let retstr = ''
 
     // 整数部分
-    let str = strarr[0]
-    let fmt = fmtarr[0]
+    let str = strArr[0]
+    let fmt = fmtArr[0]
     let i = str.length - 1
     let comma = false
     for (let f = fmt.length - 1; f >= 0; f--) {
@@ -48,8 +48,8 @@ export default {
 
     retstr = retstr + '.'
     // 处理小数部分
-    str = strarr.length > 1 ? strarr[1] : ''
-    fmt = fmtarr.length > 1 ? fmtarr[1] : ''
+    str = strArr.length > 1 ? strArr[1] : ''
+    fmt = fmtArr.length > 1 ? fmtArr[1] : ''
     i = 0
     for (let f = 0; f < fmt.length; f++) {
       switch (fmt.substr(f, 1)) {
@@ -63,5 +63,23 @@ export default {
       }
     }
     return retstr.replace(/^,+/, '').replace(/\.$/, '')
+  },
+  formatDate (date, fmt = 'yyy-MM-dd') {
+    const o = {
+      'M+': this.getMonth() + 1, // 月份
+      'd+': this.getDate(), // 日
+      'h+': this.getHours(), // 小时
+      'm+': this.getMinutes(), // 分
+      's+': this.getSeconds(), // 秒
+      'q+': Math.floor((this.getMonth() + 3) / 3), // 季度
+      S: this.getMilliseconds() // 毫秒
+    }
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + '').substr(4 - RegExp.$1.length))
+    for (const k in o) {
+      if (new RegExp('(' + k + ')').test(fmt)) {
+        fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)))
+      }
+    }
+    return fmt
   }
 }
