@@ -10,8 +10,8 @@ export function createFakeUserList() {
       avatar: 'https://cn.vitejs.dev/logo.svg',
       desc: 'manager',
       password: '123456',
-      token:
-        'eyJhbGciOiJSUzI1NiIsImtpZCI6IjUzNWY4ODM2LWUyNWUtNGE0YS05NjA4LTkzM2IzNzkwMTEzMCJ9.eyJpbmZvIjoie1wibm93VGVuYW50XCI6XCJkZmUyNTU3MS0wYjNjLTQ0MzItYjVkMi04NzFiMjRmMDA3MzBcIixcInJvbGVzXCI6W1wiTFRDX0xTMDA1XCIsXCJMVEMwMDAwMTFcIixcIkxUQ19TVVBFUl9BRE1JTlwiLFwiTFRDMDAwMDg0XCIsXCJHQVRFV0FZX1NVUEVSX0FETUlOXCIsXCJMVEMwMDAxNzRcIixcIkxUQzAwMDE3NVwiXSxcInN1cGVyQWRtaW5cIjpmYWxzZSxcInRlbmFudHNcIjpbXCJkZmUyNTU3MS0wYjNjLTQ0MzItYjVkMi04NzFiMjRmMDA3MzBcIixcImRmZTI1NTcxLTBiM2MtNDQzMi1iNWQyLTg3MWIyNGYwMDczMFwiXSxcInVzZXJJZFwiOlwiYzVhMzhjYjgxM2VlNGU4NThlZTY1ZDdkYmZjMzU0NzdcIixcInVzZXJOYW1lXCI6XCJhZG1pblwifSIsInN1YiI6ImFkbWluIiwiYXVkIjoibXNtcCIsImV4cCI6MTYyODM4Nzk1NSwiaWF0IjoxNjI1Nzk1OTU1fQ.kwJgiKYN-1mi3XN1KEynXfJGKT1YAJLiIK6JKxdN22CjllRJ0UkzSBfanqnx67h6Iw142CK_hyLeVeplUU_uIZSS_S4kUkvpw9LD3BLdj49dRHvWi2-siZStAl_kChm2XwyP_X8ktxHw3d7EVBulKz693fEuiyocZHStRfDCEyoXdyHFQc5Q0Z20cfEwcL60_AJaI_qmVwbxmKnNPxA8Jgb8LBGvf-f12tL58EtdRnhCVJrOY-YIIwYr6_dcPtBmUAGrqz2l4YsBSnRp63C0qlQTgwjXhBz2-uWcmDVsFQP6vJ5B-uxzzWX8aYOxT_ryIjm_GwGhkIDjQh-Lif6wDQ',
+      token: 'fakeToken1',
+      homePath: '/dashboard/analysis',
       roles: [
         {
           roleName: 'Super Admin',
@@ -27,6 +27,7 @@ export function createFakeUserList() {
       avatar: 'https://cn.vitejs.dev/logo.svg',
       desc: 'tester',
       token: 'fakeToken2',
+      homePath: '/dashboard/workbench',
       roles: [
         {
           roleName: 'Tester',
