@@ -43,7 +43,7 @@ export default {
       this.$tab.add('/mainData/aaa?id=' + Math.random(), '新标签页')
     },
     onReplaceTab() {
-      this.$tab.replace('/newTab', '新标签页')
+      this.$tab.replace('/mainData/product', '新标签页')
     },
   }
 }
