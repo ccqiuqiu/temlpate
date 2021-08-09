@@ -177,13 +177,13 @@ export default {
   mounted() {
     setTimeout(() => {
       const data = Array.from({length: 38}, (v, k) => ({id: k, name: 'name' + k}))
-      data[0].children = [{id: 676333, name: 'children'}]
+      data[3].children = [{id: 676333, name: 'children'}]
       this.data = data
     }, 500)
   },
   methods: {
-    dialog() {
-      const dialog = this.$utils.dialog('标题', <qx-table columns={this.columns} form={this.form2} border stripe size="small"/>, {
+    async dialog() {
+      const {dialog} = await this.$utils.dialog('标题', <qx-table columns={this.columns} form={this.form2} border stripe size="small"/>, {
         btn: [{
           text: '确定',
           cb: () => {

@@ -8,6 +8,8 @@ import modules from './store'
 import qianxun from '../../packages/index'
 import './assets/css/base.scss'
 
+import { registerMicroApps, start } from 'qiankun'
+
 import utils from './assets/utils'
 
 // 注册svg图标
@@ -15,6 +17,19 @@ import './assets/icons/icon'
 import Logo from './views/Logo'
 
 Vue.config.productionTip = false
+
+const apps = [
+  {
+    name: '用户中心',
+    entry: '//115.29.240.129:3000',
+    container: '#app-uc',
+    activeRule: '/#/app-uc',
+    loader: loading => {
+      console.log('loader', loading)
+    }
+  }
+]
+
 Vue.use(qianxun, {
   ui: {
     size: 'small',
@@ -51,10 +66,14 @@ Vue.use(qianxun, {
   // 主框架数据初始化后执行
   afterCreated: () => {
     console.log('afterCreated')
+    // 微前端启动
+    registerMicroApps(apps)
+    start()
   },
   onLogout: ({router}) => {
     console.log('退出了')
     router.push('/login')
-  }
+  },
+  apps
 })
 Vue.use(utils)
