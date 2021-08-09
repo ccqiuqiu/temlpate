@@ -17,6 +17,7 @@ import Logo from './views/Logo'
 Vue.config.productionTip = false
 
 Vue.use(qianxun, {
+  appId: 'qianxun',
   ui: {
     size: 'small',
     // forceMultiTab: true // url严格模式，强制参数不同的url打开新标签,
