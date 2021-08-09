@@ -32,15 +32,6 @@ const actions = {
                 ]
               },
               {id: '2', name: '没有下级的菜单', path: '/order'},
-              {
-                id: '3',
-                name: '子应用',
-                path: '',
-                children: [
-                  {id: '31', name: '角色', path: '/app-uc/system/role'},
-                  {id: '32', name: '菜单', path: '/app-uc/system/permission'},
-                ]
-              },
             ],
             resources: ['test'],
           }
