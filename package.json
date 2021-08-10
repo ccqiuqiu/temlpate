@@ -1,6 +1,6 @@
 {
   "name": "qianxun-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build"
@@ -19,7 +19,7 @@
     "vxe-table": "^3.3.10",
     "vxe-table-plugin-element": "^1.11.2",
     "xe-utils": "^3.3.1",
-    "qianxun": "^1.0.4"
+    "qianxun": "^1.0.5"
   },
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.14.5",
