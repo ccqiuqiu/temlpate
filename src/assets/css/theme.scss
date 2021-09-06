@@ -4,7 +4,18 @@
 @import "./vars";
 .main-app {
   /*覆盖主题样式*/
+  .qx-dialog .el-dialog{
+    margin-bottom: 16px;
+    &.is-fullscreen{
+      margin-bottom: 0;
 
+      .el-dialog__body{
+        > * {
+          height: calc(100vh - 156px) !important;
+        }
+      }
+    }
+  }
   .vxe-table {
     .vxe-table--fixed-right-wrapper.scrolling--middle{
       box-shadow: -4px 0 4px 0 rgba(0,0,0, 0.06) !important;
