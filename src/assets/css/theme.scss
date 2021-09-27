@@ -17,6 +17,16 @@
     }
   }
   .vxe-table {
+    .vxe-filter--btn.el-icon-arrow-down{
+      font-size: 14px;
+      font-weight: bold;
+      &:hover{
+        color: $--color-primary;
+      }
+    }
+    .is--filter-active .vxe-cell--filter .vxe-filter--btn{
+      color: $--color-primary;
+    }
     .vxe-table--fixed-right-wrapper.scrolling--middle{
       box-shadow: -4px 0 4px 0 rgba(0,0,0, 0.06) !important;
     }
