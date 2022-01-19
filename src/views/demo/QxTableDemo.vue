@@ -3,7 +3,7 @@
     <qx-table border stripe
               :selected.sync="selected" :data="data" :columns="columns" :btn="btn" :form="form"
               autoHeight size="small">
-      <span slot="aaa">dfsdfsd</span>
+      <span slot="aaa">{{$t('demo.hello')}}</span>
     </qx-table>
 
     <qx-v-grid
@@ -115,7 +115,7 @@ export default {
       form: {
         rule: [
           {
-            type: 'Input',
+            type: 'DatePicker',
             title: '名称',
             field: 'abcCode',
           },
