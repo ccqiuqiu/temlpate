@@ -14,13 +14,13 @@ import utils from './assets/utils'
 import './assets/icons/icon'
 import Logo from './views/Logo'
 // 国际化
-import {i18n} from './locales'
+import messages from './locales'
 
 Vue.config.productionTip = false
 
 Vue.use(qianxun, {
   appId: 'qianxun',
-  i18n,
+  i18n: {messages},
   ui: {
     size: 'small',
     // forceMultiTab: true // url严格模式，强制参数不同的url打开新标签,

@@ -9,6 +9,7 @@
       <qx-icon name="demo"></qx-icon>
       <qx-icon name="arrow"></qx-icon>
     </p>
+    <p>{{$t('demo.hello')}}</p>
     <form-create
       v-model="fApi"
       :rule="rule"
