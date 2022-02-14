@@ -9,7 +9,10 @@
       <qx-icon name="demo"></qx-icon>
       <qx-icon name="arrow"></qx-icon>
     </p>
-
+    <form-create
+      v-model="fApi"
+      :rule="rule"
+      :option="option"></form-create>
   </div>
 </template>
 
@@ -22,10 +25,27 @@ export default {
   },
   data() {
     return {
+      fApi: null,
+      rule: [
+        {type: 'input', field: 'd7k1m82b0rx97', title: '输入框', info: '23', col: {span: 12}},
+        {type: 'input', field: 'u1g1m82bklq4k', title: '输入框', info: {info: '243321', style: 'color: red'}, col: {span: 12}},
+        {
+          type: 'checkbox',
+          field: 'qx41m82b0wspy',
+          title: '多选框',
+          info: '',
+          options: [
+            {value: '1', label: '选项1'},
+            {value: '2', label: '选项2'}
+          ],
+        },
+      ],
+      option: {
+      }
     }
   },
   created() {
-    console.log('created')
+    console.log('created1')
   },
   methods: {
     async onClick() {
@@ -43,7 +63,7 @@ export default {
       this.$tab.add('/mainData/aaa?id=' + Math.random(), '新标签页')
     },
     onReplaceTab() {
-      this.$tab.replace('/mainData/product', '新标签页')
+      this.$tab.replace('/mainData/aaa', '新标签页')
     },
   }
 }

@@ -173,6 +173,7 @@ export default {
     }
   },
   created() {
+    console.log('created2')
   },
   mounted() {
     setTimeout(() => {
