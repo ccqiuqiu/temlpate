@@ -60,9 +60,7 @@ Vue.use(qianxun, {
   },
   onLogout: ({router}) => {
     console.log('退出了')
-    router.push('/login')
-
-
+    router.push('/login');
   },
 })
 Vue.use(utils)
