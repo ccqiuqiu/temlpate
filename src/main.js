@@ -14,13 +14,13 @@ import utils from './assets/utils'
 import './assets/icons/icon'
 import Logo from './views/Logo'
 // 国际化
-// import messages from './locales'
+import messages from './locales'
 
 Vue.config.productionTip = false
 
 Vue.use(qianxun, {
   appId: 'qianxun',
-  // i18n: {messages},
+  i18n: {messages},
   ui: {
     size: 'small',
     // forceMultiTab: true // url严格模式，强制参数不同的url打开新标签,
@@ -61,6 +61,8 @@ Vue.use(qianxun, {
   onLogout: ({router}) => {
     console.log('退出了')
     router.push('/login')
+
+
   },
 })
 Vue.use(utils)
